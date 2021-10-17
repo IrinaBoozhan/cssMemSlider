@@ -33,6 +33,7 @@ body {
   display: block;
   width: 3.5rem;
   height: 3.5rem;
+  transform: translate(-20%, -20%);
 }
 
 .nav_item:hover {
