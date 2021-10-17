@@ -14,7 +14,7 @@ body {
 .position {
   margin: 5rem auto;
 }
-.navigation {
+.navigation-desctop {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -66,6 +66,27 @@ input[type="radio"] {
   height: 100%;
   border-bottom: 7px solid #fff;
 }
+.slide_text {
+  color: #000;
+  font-size: xx-large;
+  text-align: end;
+  width: 100%;
+}
+.bottom {
+  display: flex;
+  justify-content: space-between;
+}
+.text_wrapper {
+  width: 60%;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+.slides_text {
+  display: flex;
+  width: 500%;
+  height: 100%;
+}
+
 #radio1:checked ~ .slide1 {
   margin-left: 0;
   animation: show1 2s 1;
@@ -91,14 +112,25 @@ input[type="radio"] {
   animation-fill-mode: forwards;
   margin-left: -80%;
 }
-.slide_text {
-  display: block;
-  color: #000;
-  font-size: xx-large;
-  margin-right: 1em;
-  margin-bottom: 1em;
-  text-align: end;
-  animation: show-text 2s 1;
+
+#radio1:checked ~ .text_wrapper .slides_text .text1 {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .text_wrapper .slides_text .text1 {
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .text_wrapper .slides_text .text1 {
+  margin-left: -40%;
+}
+
+#radio4:checked ~ .text_wrapper .slides_text .text1 {
+  margin-left: -60%;
+}
+
+#radio5:checked ~ .text_wrapper .slides_text .text1 {
+  margin-left: -80%;
 }
 
 @keyframes show1 {
@@ -143,13 +175,5 @@ input[type="radio"] {
   }
   100% {
     margin-left: -80%;
-  }
-}
-@keyframes show-text {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }
